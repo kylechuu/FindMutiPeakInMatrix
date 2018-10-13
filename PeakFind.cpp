@@ -13,7 +13,7 @@ class peakinfo{
         int peak_row;
         int peak_col;
 };
-char * getcwd(char * path, int size);
+//char * getcwd(char * path, int size);
 int main(int argc, char *argv[]){
     ////getcwd(path,sizeof(path));
     string inputpath;
@@ -59,6 +59,10 @@ int main(int argc, char *argv[]){
                 for(int i=0;i<peakcount;i++)
                 final_peak<<peak_list[i].peak_row<<" "<<peak_list[i].peak_col<<"\n";
                 final_peak.close();
+                vector<peakinfo>().swap(peak_list);
+                vector<vector<int>>().swap(matrix);
+
+
             }
     }
     else cout<<"unable to open file";
